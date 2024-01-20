@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "a4178771-24c6-48a7-b39e-cc4d50e69560",
+		"name": "jenfi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27198603"
+	},
+	"item": [
+		{
+			"name": "lineviewset",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Line2\",\n    \"status\": \"Available\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/api/lines/",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"lines",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "trainviewset",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Express 01\",\n    \"cost\": 300.00,\n    \"max_weight\": 1000.00,\n    \"max_volume\": 20000.00,\n    \"lines\": [1, 2],\n    \"status\": \"Available\",\n    \"current_weight\": 0.0,\n    \"current_volume\": 0.0,\n    \"maintenance_check\": \"2024-01-20T10:00:00Z\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/api/trains/",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"trains",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "parcelviewset",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"weight\": 10.5,\n    \"volume\": 100.0,\n    \"status\": \"Pending\",\n    \"owner_id\": 123\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/api/parcels/",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"parcels",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookingviewset",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"train\": 1,\n    \"parcel\": 1,\n    \"line\": 1,\n    \"departure_time\": \"2024-01-20T12:00:00Z\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/api/bookings/",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"bookings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "process_shipments",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/api/process-shipments/",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"api",
+						"process-shipments",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
